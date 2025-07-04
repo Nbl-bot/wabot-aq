@@ -1,0 +1,304 @@
+/* ====== Physio Connect Stylesheet ====== */
+
+:root {
+  --primary-color: #00838f;
+  --secondary-color: #00bfa5;
+  --background-color: #f4f7f6;
+  --card-background: #ffffff;
+  --text-color: #37474f;
+  --light-text-color: #78909c;
+  --border-color: #e0e0e0;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  gap: 0.75rem;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.header-nav a {
+  margin-left: 1.5rem;
+  text-decoration: none;
+  color: var(--light-text-color);
+  font-weight: 500;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+  color: var(--primary-color);
+}
+
+.main-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-background);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.card-header .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.card-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+/* Chat */
+#chat-box {
+  height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.chat-message {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  max-width: 85%;
+}
+
+.user-message {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.bot-message {
+  align-self: flex-start;
+}
+
+.message-bubble {
+  padding: 10px 15px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+}
+
+.user-message .message-bubble {
+  background-color: var(--primary-color);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.bot-message .message-bubble {
+  background-color: #eef1f1;
+  border-bottom-left-radius: 4px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#chat-input-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px 0 0 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#send-button {
+  padding: 0 25px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 0 25px 25px 0;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#send-button:hover {
+  background: var(--secondary-color);
+}
+
+/* Search */
+#search-input-wrapper {
+  position: relative;
+}
+
+#search-input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid var(--border-color);
+  border-radius: 25px;
+  box-sizing: border-box;
+}
+
+#search-input-wrapper .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--light-text-color);
+}
+
+.search-item {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.search-item:last-child {
+  border-bottom: none;
+}
+
+.search-item h4 {
+  margin: 0 0 5px;
+  color: var(--primary-color);
+}
+
+/* Tracking */
+#tracking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+#tracking-form input,
+#tracking-form select,
+#tracking-form textarea,
+#tracking-form button {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+#tracking-form button {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+#tracking-form button:hover {
+  background: var(--secondary-color);
+}
+
+.log-item {
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--secondary-color);
+  background: #fcfcfc;
+  margin-top: 1rem;
+}
+
+.log-item.klinik {
+  border-left-color: var(--primary-color);
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.log-header h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+.log-header span {
+    font-size: 0.85rem;
+    color: var(--light-text-color);
+    font-weight: 500;
+}
+.log-item p {
+    margin: 0;
+    color: var(--text-color);
+}
+
+
+/* Map */
+#map {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: var(--light-text-color);
+}
+
+/* Dark Mode */
+body.dark {
+  --background-color: #121212;
+  --card-background: #1e1e1e;
+  --text-color: #f1f1f1;
+  --light-text-color: #aaaaaa;
+  --border-color: #333333;
+  --shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}

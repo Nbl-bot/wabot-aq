@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physio Connect | Telemedicine Fisioterapi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2L12 22M22 12L2 12M19 19L5 5M19 5L5 19"/>
+                </svg>
+                <span>Physio Connect</span>
+            </div>
+            <nav class="header-nav">
+                <a href="#chat-card">Konsultasi</a>
+                <a href="#search-card">Info Cedera</a>
+                <a href="#tracking-card">Lacak Terapi</a>
+                <a href="#map-card">Lokasi</a>
+            </nav>
+        </header>
+
+        <main class="main-layout">
+            <div class="main-column">
+                <div id="chat-card" class="card"></div>
+                <div id="search-card" class="card"></div>
+                <div id="tracking-card" class="card"></div>
+                <div id="video-card" class="card"></div>
+                <div id="reminder-card" class="card"></div>
+                <div id="quiz-card" class="card"></div>
+                <div id="forum-card" class="card"></div>
+            </div>
+
+            <div class="sidebar-column">
+                <div id="map-card" class="card"></div>
+                <div id="jurnal-card" class="card"></div>
+                <div id="bookmark-card" class="card"></div>
+                <div id="sertifikat-card" class="card"></div>
+                <div id="darkmode-card" class="card"></div>
+                <div id="progress-card" class="card"></div>
+            </div>
+        </main>
+
+        <footer class="footer">&copy; 2025 Physio Connect</footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
